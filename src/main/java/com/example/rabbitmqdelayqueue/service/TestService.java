@@ -13,6 +13,6 @@ public class TestService {
     }
 
     public void sendDelayedMessage() {
-        rabbitService.delayedSend("my-exchange", "my-routingkey", "Hello, RabbitMQ!", 10000);
+        rabbitService.delayedSend("my-exchange", "my-routingkey", "Hello, RabbitMQ!", 5000);
     }
 }
