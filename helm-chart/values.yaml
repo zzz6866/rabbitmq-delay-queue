@@ -1,0 +1,9 @@
+# helm install rabbitmq-delay -f helm-chart/values.yaml oci://registry-1.docker.io/bitnamicharts/rabbitmq
+auth:
+  username: "admin"
+  password: "admin"
+communityPlugins: "https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases/download/v3.12.0/rabbitmq_delayed_message_exchange-3.12.0.ez"
+extraPlugins: "rabbitmq_auth_backend_ldap rabbitmq_delayed_message_exchange"
+
+service:
+  type: LoadBalancer
